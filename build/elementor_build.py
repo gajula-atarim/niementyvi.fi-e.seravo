@@ -173,26 +173,13 @@ def build_header():
     logo = heading('Niementyven tila', tag='div', size=32, size_tablet=28, size_mobile=26,
                    color=BROWN, lh=1, url=SITE + '/', _css_classes='nt-logo')
 
-    search = widget(
-        'hfe-search-button',
-        layout='text', placeholder='Search', size=px(30),
-        input_text_color=INK, input_placeholder_color='#222222', input_background_color='rgba(0,0,0,0)',
-        border_style='solid', border_width=box(0, 0, 1, 0), border_color=INK, border_radius=px(0),
-        button_background_background='classic', button_background_color='rgba(0,0,0,0)',
-        button_icon_color=INK, button_background_color_hover='rgba(0,0,0,0)',
-        icon_size=px(16), button_width=px(28),
-        _element_width='initial', _element_custom_width=px(150),
-        **typo('input_typography', SANS, 12, 400),
-    )
-
     def icon(value, library, url, label):
         return widget('icon', selected_icon={'value': value, 'library': library},
                       link=link(url), primary_color=INK, hover_primary_color=ACCENT,
                       size=px(18), _title=label)
 
     right = inner(
-        [search,
-         icon('fas fa-phone-alt', 'fa-solid', 'tel:0503633693', 'Call'),
+        [icon('fas fa-phone-alt', 'fa-solid', 'tel:0503633693', 'Call'),
          icon('far fa-envelope', 'fa-regular', 'mailto:niementyvi@gmail.com', 'Email')],
         flex_direction='row', flex_justify_content='flex-end', flex_align_items='center',
         flex_gap=gap(16), width=px(32, '%'), width_mobile=px(100, '%'),
