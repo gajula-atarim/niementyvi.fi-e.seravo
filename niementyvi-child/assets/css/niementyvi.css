@@ -1,0 +1,243 @@
+/* Niementyven tila – design layer for the Elementor build. */
+
+:root {
+	--nt-mint: #B8E2D2;
+	--nt-mint-deep: #9ED8C7;
+	--nt-sand: #E9DFCB;
+	--nt-sand-deep: #E6DAC2;
+	--nt-cream: #F4EBDD;
+	--nt-ink: #222222;
+	--nt-brown: #5B2A1A;
+	--nt-honey: #6B4A1E;
+	--nt-accent: #E8892B;
+	--nt-rose: #FCE9EC;
+	--nt-red: #C0392B;
+	--nt-script: 'Dancing Script', cursive;
+	--nt-sans: 'Rubik', sans-serif;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	background: var(--nt-sand);
+	color: var(--nt-ink);
+	font-family: var(--nt-sans);
+	-webkit-font-smoothing: antialiased;
+}
+
+body.home {
+	background: linear-gradient(180deg, #B8E2D2 0%, #B8E2D2 18%, #E9DFCB 30%, #B8E2D2 48%, #E9DFCB 62%, #B5DFCC 82%, #B5DFCC 100%);
+}
+
+a {
+	text-underline-offset: 3px;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes nt-mq { from { transform: translateX(0); } to { transform: translateX(-33.3333%); } }
+@keyframes nt-wing { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.45); } }
+@keyframes nt-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* ---------- Marquees (top bar + feature strip) ----------
+ * Content is a normal Elementor Icon List / container; bees.js duplicates
+ * the items and adds .nt-marquee--running on the live site. */
+.nt-marquee {
+	overflow: hidden;
+}
+
+.nt-marquee .nt-marquee__track {
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	width: max-content !important;
+	max-width: none !important;
+	white-space: nowrap;
+	gap: 0 !important;
+}
+
+.nt-marquee--running .nt-marquee__track {
+	animation: nt-mq var(--nt-mq-dur, 45s) linear infinite;
+}
+
+.nt-marquee .nt-marquee__track > * {
+	flex: none !important;
+	width: auto !important;
+}
+
+.nt-topbar {
+	--nt-mq-dur: 45s;
+}
+
+.nt-topbar .elementor-icon-list-item {
+	padding-right: 14px !important;
+	margin-right: 14px !important;
+}
+
+.nt-feats {
+	--nt-mq-dur: 48s;
+}
+
+.nt-feats .nt-marquee__track > * {
+	margin-right: 88px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.nt-marquee--running .nt-marquee__track,
+	.nt-circle {
+		animation: none !important;
+	}
+	.nt-bees {
+		display: none;
+	}
+}
+
+/* ---------- Header ---------- */
+.nt-logo .elementor-heading-title,
+.nt-logo .elementor-heading-title a {
+	font-family: var(--nt-script);
+	font-weight: 700;
+	color: var(--nt-brown);
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.nt-header-icons a {
+	display: flex;
+	color: var(--nt-ink);
+}
+
+.nt-header-icons a:hover {
+	color: var(--nt-accent);
+}
+
+/* ---------- Hero ----------
+ * .nt-hero        : the hero container (also gets .nt-bees-hero)
+ * .nt-hero-circles: inner container holding 5 Image widgets .nt-circle--1..5 */
+.nt-hero,
+.nt-story {
+	position: relative;
+	overflow: hidden;
+}
+
+.e-con.nt-hero-circles {
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60% !important;
+	max-width: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	z-index: 1;
+}
+
+.nt-hero-text {
+	z-index: 4;
+}
+
+.elementor-widget.nt-circle {
+	position: absolute !important;
+	aspect-ratio: 1;
+	margin: 0 !important;
+	border-radius: 50%;
+	box-shadow: 0 18px 30px rgba(20, 60, 50, .28), 0 4px 8px rgba(20, 60, 50, .18);
+	animation: nt-float 6s ease-in-out infinite;
+}
+
+.nt-circle .elementor-widget-container,
+.nt-circle a {
+	width: 100%;
+	height: 100%;
+}
+
+.nt-circle img {
+	display: block;
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none !important;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 6px solid var(--nt-cream) !important;
+	box-sizing: border-box;
+	background: var(--nt-sand);
+}
+
+.elementor-widget.nt-circle--1 { right: -6%; top: -14%; width: 44% !important; animation-delay: 0s; }
+.elementor-widget.nt-circle--2 { left: 34%; top: 36%; width: 32% !important; animation-delay: 1.2s; }
+.elementor-widget.nt-circle--3 { right: 4%; top: 44%; width: 30% !important; animation-delay: 2.4s; }
+.elementor-widget.nt-circle--4 { left: 34%; top: 6%; width: 15% !important; animation-delay: .6s; }
+.elementor-widget.nt-circle--5 { left: 52%; bottom: -16%; width: 24% !important; animation-delay: 1.8s; }
+
+/* Bee layer injected by bees.js */
+.nt-bees {
+	position: absolute;
+	inset: 0;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.nt-bees svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.nt-bees .nt-wing {
+	transform-box: fill-box;
+	transform-origin: 50% 100%;
+	animation: nt-wing .16s linear infinite;
+}
+
+.nt-story > .e-con-inner,
+.nt-story > .e-con {
+	position: relative;
+	z-index: 2;
+}
+
+.nt-story-image img {
+	mix-blend-mode: multiply;
+}
+
+@media (max-width: 767px) {
+	.e-con.nt-hero-circles {
+		width: 100% !important;
+		opacity: .35;
+	}
+}
+
+/* ---------- Cards ---------- */
+.nt-ratio-product img {
+	width: 100%;
+	aspect-ratio: 5 / 6;
+	object-fit: cover;
+	background: #3A2A20;
+}
+
+.nt-ratio-square img {
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	background: #2A2018;
+}
+
+/* Dark "inset" button used in the hero. */
+.nt-btn-inset .elementor-button {
+	box-shadow: inset 0 0 0 2px #fff;
+}
+
+.nt-btn-inset .elementor-button:hover {
+	box-shadow: inset 0 0 0 2px #fff;
+}
+
+/* ---------- Footer ---------- */
+.nt-footer-list a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.nt-footer-list a:hover {
+	color: var(--nt-accent);
+}
