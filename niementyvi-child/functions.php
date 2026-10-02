@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NIEMENTYVI_CHILD_VERSION', '1.0.2' );
+define( 'NIEMENTYVI_CHILD_VERSION', '1.0.3' );
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style(
@@ -36,3 +36,23 @@ add_action( 'wp_enqueue_scripts', function () {
 		true
 	);
 }, 20 );
+
+/**
+ * Finnish for the few front-end strings Ultimate Addons for Elementor ships
+ * without a Finnish translation (skip link and mobile menu button labels).
+ */
+add_filter( 'gettext', function ( $translation, $text ) {
+	static $fi = array(
+		'Skip to main content' => 'Siirry sisältöön',
+		'Skip to content'      => 'Siirry sisältöön',
+		'Menu Toggle'          => 'Avaa tai sulje valikko',
+		'Menu'                 => 'Valikko',
+	);
+	if ( is_admin() ) {
+		return $translation;
+	}
+	if ( $translation === $text && isset( $fi[ $text ] ) ) {
+		return $fi[ $text ];
+	}
+	return $translation;
+}, 10, 2 );
