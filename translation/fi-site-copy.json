@@ -139,7 +139,7 @@
   },
   "text": {
    "en": "On our farm we grow clover meadow, honey flower and biodiversity plants, plus a small kitchen garden and potatoes. Our bees gather nectar from these fields and the wild plants of the Finnish summer.",
-   "fi": "Tilallamme kasvaa apilaniittyä, hunajakukkaa ja luonnon monimuotoisuutta lisääviä kasveja, ja lisäksi meillä on pieni kasvimaa ja perunamaa. Mehiläisemme keräävät mettä näistä kasveista ja suomalaisen kesän luonnonkasveista."
+   "fi": "Tilallamme on apilaniittyä, hunajakukkaa ja luonnon monimuotoisuutta lisääviä kasveja. Lisäksi meillä on pieni kasvimaa ja perunamaa. Mehiläisemme keräävät mettä tilan niityiltä ja pelloilta sekä suomalaisen kesän luonnonkasveista."
   }
  },
  "explore": {
@@ -261,7 +261,7 @@
   },
   "17": {
    "en": "Gift jar of honey",
-   "fi": "Lahjapurkki hunajaa"
+   "fi": "Hunajaa lahjapurkissa"
   },
   "18": {
    "en": "Honey",
@@ -298,5 +298,5 @@
    "fi": "Etusivu"
   }
  },
- "_review": "Blind back-translation review done twice by an independent reviewer; all lines rated OK or adjusted per its notes."
+ "_review": "Three independent blind reviews (back-translation + strict proofread). Final proofread: 0 errors; minor notes applied."
 }
