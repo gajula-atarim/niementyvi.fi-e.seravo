@@ -226,12 +226,13 @@ def build_header():
         'navigation-menu',
         menu='main-menu', layout='horizontal', navmenu_align='center',
         pointer='none', dropdown='mobile', resp_align='center', full_width_dropdown='yes',
-        padding_horizontal_menu_item=px(15), padding_vertical_menu_item=px(4),
+        padding_horizontal_menu_item=px(18), padding_horizontal_menu_item_tablet=px(15),
+        padding_vertical_menu_item=px(4),
         color_menu_item=INK, color_menu_item_hover=ACCENT, color_menu_item_active=ACCENT,
         bg_color_menu_item='rgba(0,0,0,0)', bg_color_menu_item_hover='rgba(0,0,0,0)',
         bg_color_menu_item_active='rgba(0,0,0,0)',
         color_dropdown_item=INK, color_dropdown_item_hover=ACCENT, toggle_color=INK,
-        **typo('menu_typography', SANS, 11, 700, 1.2, 'em', 'uppercase', 0.66),
+        **typo('menu_typography', SANS, 13, 700, 1.2, 'em', 'uppercase', 0.66, size_tablet=11),
     )
     nav_row = con([nav], padding=box(14, 24, 10, 24), hide_mobile='hidden-mobile')
 
