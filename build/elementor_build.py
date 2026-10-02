@@ -271,7 +271,7 @@ def build_footer():
     )
 
     def column(children):
-        return inner(children, width=px(22, '%'), width_tablet=px(45, '%'), width_mobile=px(100, '%'),
+        return inner(children, width=px(22, '%'), width_tablet=px(45, '%'), width_mobile=px(40, '%'),
                      _flex_size='grow', flex_gap=gap(10), padding=box(0, 0, 0, 0))
 
     columns = inner(
@@ -288,9 +288,10 @@ def build_footer():
                       size=12, lh=1.5, color='#FFFFFF', align='left'),
                  icon_list([{'text': '050 363 3693', 'link': link('tel:0503633693')},
                             {'text': 'niementyvi@gmail.com', 'link': link('mailto:niementyvi@gmail.com')}],
-                           **white_list)])],
+                           icon_typography_text_decoration='underline', **white_list)])],
         flex_direction='row', flex_wrap='wrap', flex_gap=gap(32), padding=box(0, 0, 0, 0),
-        flex_wrap_tablet='wrap',
+        flex_wrap_tablet='wrap', flex_wrap_mobile='wrap',
+        flex_gap_mobile={'unit': 'px', 'size': 16, 'column': '16', 'row': '28', 'isLinked': False},
     )
 
     copyright_w = widget(
@@ -304,7 +305,8 @@ def build_footer():
         [columns, copyright_w],
         html_tag='footer', _element_id='contact',
         content_width='boxed', boxed_width=px(1000),
-        flex_gap=gap(64), padding=box(56, 32, 28, 32), padding_mobile=box(48, 16, 24, 16),
+        flex_gap=gap(64), flex_gap_mobile=gap(40),
+        padding=box(56, 32, 28, 32), padding_mobile=box(48, 16, 24, 16),
         background_background='classic', background_color=INK,
     )
     return [footer]
