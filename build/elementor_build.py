@@ -387,7 +387,7 @@ def build_home():
 
     # 2. Feature strip (each item: icon image + heading)
     feats = [
-        (21, 'icon-finnish-honey.png', 'Kennohunaja icon', '100 % suomalaista hunajaa'),
+        (21, 'icon-finnish-honey.png', 'Hunajakennokuvake', '100 % suomalaista hunajaa'),
         (22, 'icon-karelian-nature.png', 'Lehtikuvake', 'Puhtaasta pohjoiskarjalaisesta luonnosta'),
         (23, 'icon-clover-fields.png', 'Apilakuvake', 'Apila- ja hunajakukkapellot'),
         (24, 'icon-naturally-good.png', 'Sydän kämmenellä -kuvake', 'Luonnostaan hyvää'),
