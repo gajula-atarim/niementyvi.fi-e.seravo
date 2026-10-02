@@ -180,7 +180,7 @@ def build_header():
 
     right = inner(
         [icon('fas fa-phone-alt', 'fa-solid', 'tel:0503633693', 'Call'),
-         icon('far fa-envelope', 'fa-regular', 'mailto:niementyvi@gmail.com', 'Email')],
+         icon('fas fa-envelope', 'fa-solid', 'mailto:niementyvi@gmail.com', 'Email')],
         flex_direction='row', flex_justify_content='flex-end', flex_align_items='center',
         flex_gap=gap(16), width=px(32, '%'), width_mobile=px(100, '%'),
         flex_justify_content_mobile='center', padding=box(0, 0, 0, 0),
