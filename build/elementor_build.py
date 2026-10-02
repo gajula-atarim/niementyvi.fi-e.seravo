@@ -417,10 +417,12 @@ def build_home():
     product_cards = [
         inner([image(mid, fn, alt, size='large', _css_classes='nt-ratio-product', _element_width='inherit', height=px(266),
                      height_tablet=px(410), height_mobile=px(410), **{'object-fit': 'cover'}),
-               heading(name, tag='h3', family=SANS, size=13, weight=500, lh=1.4, _margin=box(6, 0, 0, 0)),
-               text('<p>%s</p>' % desc, size=13, lh=1.6, color='#5A5A5A', _padding=box(0, 6, 0, 6)),
+               heading(name, tag='h3', family=SANS, size=13, weight=500, lh=1.4, _margin=box(0, 0, 0, 0)),
+               text('<p>%s</p>' % desc, size=13, lh=1.6, color='#5A5A5A', _padding=box(0, 6, 0, 6),
+                    paragraph_spacing=px(0)),
                heading(price, tag='div', family=SANS, size=12, weight=600, lh=1.4)],
-              flex_gap=gap(10), flex_align_items='center', padding=box(0, 0, 0, 0))
+              flex_gap=gap(14), flex_align_items='center', padding=box(0, 0, 0, 0),
+              padding_mobile=box(0, 16, 0, 16))
         for mid, fn, alt, name, desc, price in products
     ]
     honey = con(
