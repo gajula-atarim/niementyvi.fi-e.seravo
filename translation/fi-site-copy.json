@@ -298,5 +298,20 @@
    "fi": "Etusivu"
   }
  },
- "_review": "Three independent blind reviews (back-translation + strict proofread). Final proofread: 0 errors; minor notes applied."
+ "_review": "Three independent blind reviews (back-translation + strict proofread). Final proofread: 0 errors; minor notes applied.",
+ "hidden_labels": {
+  "skip_link": {
+   "en": "Skip to main content",
+   "fi": "Siirry sisältöön"
+  },
+  "menu_button_label": {
+   "en": "Menu Toggle",
+   "fi": "Avaa tai sulje valikko"
+  },
+  "menu_button_text": {
+   "en": "Menu",
+   "fi": "Valikko"
+  }
+ },
+ "_hidden_labels_note": "UAE has no Finnish language pack; these are translated by a front-end-only gettext filter in niementyvi-child/functions.php (theme 1.0.3)."
 }
