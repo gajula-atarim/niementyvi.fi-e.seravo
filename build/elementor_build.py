@@ -166,18 +166,18 @@ def build_header():
 
     service = icon_list(
         [{'text': 'Customer Service 050 363 3693', 'link': link('tel:0503633693')}],
-        view='traditional', text_color=INK, text_color_hover=ACCENT, icon_align_mobile='left',
-        icon_typography_font_size_mobile=px(10), icon_typography_line_height_mobile=px(1.3, 'em'),
+        view='traditional', text_color=INK, text_color_hover=ACCENT, icon_align_mobile='center',
+        icon_typography_font_size_mobile=px(11), icon_typography_line_height_mobile=px(1.4, 'em'),
         **typo('icon_typography', SANS, 12, 400, 1.4),
     )
 
-    logo = heading('Niementyven tila', tag='div', size=32, size_tablet=28, size_mobile=19,
+    logo = heading('Niementyven tila', tag='div', size=32, size_tablet=28, size_mobile=22,
                    color=BROWN, lh=1, url=SITE + '/', _css_classes='nt-logo')
 
     def icon(value, library, url, label):
         return widget('icon', selected_icon={'value': value, 'library': library},
                       link=link(url), primary_color=INK, hover_primary_color=ACCENT,
-                      size=px(18), size_mobile=px(16), _title=label)
+                      size=px(18), size_mobile=px(18), _title=label)
 
     mobile_menu = widget(
         'navigation-menu',
@@ -185,6 +185,8 @@ def build_header():
         menu='main-menu', layout='horizontal', navmenu_align='right', pointer='none',
         dropdown='mobile', resp_align='right', full_width_dropdown='yes',
         _element_width='initial', _element_custom_width=px(24),
+        _element_width_mobile='initial', _element_custom_width_mobile=px(30, '%'),
+        _flex_order_mobile='custom', _flex_order_custom_mobile=3,
         toggle_color=INK, toggle_hover_color=ACCENT, toggle_size=px(20), toggle_border_width=px(0),
         color_menu_item=INK, color_menu_item_hover=ACCENT, color_menu_item_active=ACCENT,
         color_dropdown_item=INK, color_dropdown_item_hover=ACCENT, color_dropdown_item_active=ACCENT,
@@ -196,27 +198,28 @@ def build_header():
 
     right = inner(
         [icon('fas fa-phone-alt', 'fa-solid', 'tel:0503633693', 'Call'),
-         icon('fas fa-envelope', 'fa-solid', 'mailto:niementyvi@gmail.com', 'Email'),
-         mobile_menu],
+         icon('fas fa-envelope', 'fa-solid', 'mailto:niementyvi@gmail.com', 'Email')],
         flex_direction='row', flex_justify_content='flex-end', flex_align_items='center',
-        flex_gap=gap(16), flex_gap_mobile=gap(10), width=px(32, '%'),
-        width_mobile={'unit': 'custom', 'size': 'max-content', 'sizes': []},
-        flex_justify_content_mobile='flex-end', flex_wrap_mobile='nowrap',
-        flex_align_items_mobile='center', padding=box(0, 0, 0, 0),
+        flex_gap=gap(16), flex_gap_mobile=gap(14), width=px(32, '%'), width_mobile=px(30, '%'),
+        flex_justify_content_mobile='flex-start', flex_wrap_mobile='nowrap',
+        flex_align_items_mobile='center', _flex_order_mobile='custom', _flex_order_custom_mobile=1,
+        padding=box(0, 0, 0, 0),
     )
 
     top_row = con(
         [inner([service], width=px(32, '%'),
-               width_mobile={'unit': 'custom', 'size': 'calc(100% - 222px)', 'sizes': []},
-               flex_align_items_mobile='flex-start', padding=box(0, 0, 0, 0)),
-         inner([logo], width=px(30, '%'),
-               width_mobile={'unit': 'custom', 'size': 'max-content', 'sizes': []},
+               width_mobile=px(100, '%'), flex_align_items_mobile='center',
+               _flex_order_mobile='start', padding=box(0, 0, 0, 0)),
+         inner([logo], width=px(30, '%'), width_mobile=px(40, '%'),
+               _flex_order_mobile='custom', _flex_order_custom_mobile=2,
                padding=box(0, 0, 0, 0)),
-         right],
+         right,
+         mobile_menu],
         content_width='boxed', boxed_width=px(1240),
         flex_direction='row', flex_direction_mobile='row', flex_align_items_mobile='center',
-        flex_align_items='center', flex_gap=gap(20), flex_gap_mobile=gap(8), flex_wrap='nowrap',
-        padding=box(16, 40, 0, 40), padding_mobile=box(12, 16, 12, 16),
+        flex_align_items='center', flex_gap=gap(20), flex_wrap='nowrap', flex_wrap_mobile='wrap',
+        flex_gap_mobile={'unit': 'px', 'size': 0, 'column': '0', 'row': '10', 'isLinked': False},
+        padding=box(16, 40, 0, 40), padding_mobile=box(10, 16, 12, 16),
     )
 
     nav = widget(
