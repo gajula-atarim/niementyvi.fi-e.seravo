@@ -177,7 +177,7 @@ def build_header():
     def icon(value, library, url, label):
         return widget('icon', selected_icon={'value': value, 'library': library},
                       link=link(url), primary_color=INK, hover_primary_color=ACCENT,
-                      size=px(18), size_mobile=px(18), _title=label)
+                      size=px(20), size_tablet=px(20), size_mobile=px(20), _title=label)
 
     mobile_menu = widget(
         'navigation-menu',
@@ -197,8 +197,8 @@ def build_header():
     )
 
     right = inner(
-        [icon('fas fa-phone-alt', 'fa-solid', 'tel:0503633693', 'Call'),
-         icon('fas fa-envelope', 'fa-solid', 'mailto:niementyvi@gmail.com', 'Email')],
+        [icon({'url': UP + 'icon-phone-line.svg', 'id': 78}, 'svg', 'tel:0503633693', 'Call'),
+         icon({'url': UP + 'icon-mail-line.svg', 'id': 79}, 'svg', 'mailto:niementyvi@gmail.com', 'Email')],
         flex_direction='row', flex_justify_content='flex-end', flex_align_items='center',
         flex_gap=gap(16), flex_gap_mobile=gap(14), width=px(32, '%'), width_mobile=px(30, '%'),
         flex_justify_content_mobile='flex-start', flex_wrap_mobile='nowrap',
