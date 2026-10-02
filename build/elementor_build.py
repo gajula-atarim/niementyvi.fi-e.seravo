@@ -284,11 +284,15 @@ def build_footer():
                  icon_list([{'text': 'Privacy policy', 'link': link(SITE + '/privacy-policy/')},
                             {'text': 'Cookies', 'link': link('#')}], **white_list)]),
          column([col_title('Contact'),
-                 text('<p>Sari Nevalainen<br>Mikonniementie 8<br>83700 Polvijärvi</p>',
-                      size=12, lh=1.5, color='#FFFFFF', align='left'),
+                 text('<p>Sari Nevalainen<br><a href="https://www.google.com/maps/search/?api=1&amp;'
+                      'query=Mikonniementie+8%2C+83700+Polvij%C3%A4rvi" target="_blank" rel="noopener">'
+                      'Mikonniementie 8<br>83700 Polvijärvi</a></p>',
+                      size=12, lh=1.5, color='#FFFFFF', align='left', _css_classes='nt-footer-address',
+                      link_color='#FFFFFF', link_hover_color=ACCENT),
                  icon_list([{'text': '050 363 3693', 'link': link('tel:0503633693')},
                             {'text': 'niementyvi@gmail.com', 'link': link('mailto:niementyvi@gmail.com')}],
-                           icon_typography_text_decoration='underline', **white_list)])],
+                           icon_typography_text_decoration='underline', _css_classes='nt-footer-contact',
+                           **white_list)])],
         flex_direction='row', flex_wrap='wrap', flex_gap=gap(32), padding=box(0, 0, 0, 0),
         flex_wrap_tablet='wrap', flex_wrap_mobile='wrap',
         flex_gap_mobile={'unit': 'px', 'size': 16, 'column': '16', 'row': '28', 'isLinked': False},
