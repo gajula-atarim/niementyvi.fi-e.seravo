@@ -358,7 +358,7 @@ def build_home():
         [heading('Honey, naturally<br>good!', tag='h1', size=50, weight=600, align='left',
                  **typo('typography', SCRIPT, 50, 600, 1.2, size_tablet=42, size_mobile=36)),
          text('<p>Finnish honey from the pure nature and fields of North Karelia.</p>',
-              size=14, lh=1.7, color='#2F3D38', align='left'),
+              size=16, lh=1.7, color='#2F3D38', align='left'),
          button('Order now', '#honey', pad=(11, 34, 11, 34), size=11, ls=0.66, align='left',
                 border_border='solid', border_width=box(1.5, 1.5, 1.5, 1.5), border_color=INK,
                 button_hover_border_color=ACCENT, _css_classes='nt-btn-inset')],
@@ -418,7 +418,7 @@ def build_home():
         inner([image(mid, fn, alt, size='large', _css_classes='nt-ratio-product', _element_width='inherit', height=px(266),
                      height_tablet=px(410), height_mobile=px(410), **{'object-fit': 'cover'}),
                heading(name, tag='h3', family=SANS, size=13, weight=500, lh=1.4, _margin=box(6, 0, 0, 0)),
-               text('<p>%s</p>' % desc, size=12, lh=1.6, color='#5A5A5A', _padding=box(0, 6, 0, 6)),
+               text('<p>%s</p>' % desc, size=13, lh=1.6, color='#5A5A5A', _padding=box(0, 6, 0, 6)),
                heading(price, tag='div', family=SANS, size=12, weight=600, lh=1.4)],
               flex_gap=gap(10), flex_align_items='center', padding=box(0, 0, 0, 0))
         for mid, fn, alt, name, desc, price in products
@@ -426,7 +426,7 @@ def build_home():
     honey = con(
         [inner([heading('Welcome to Niementyvi farm!', size=34, size_mobile=30),
                 text('<p>We produce the best of nature\'s strength, honey, from the pure nature and fields '
-                     'of North Karelia. Naturally good!</p>')],
+                     'of North Karelia. Naturally good!</p>', size=16)],
                flex_gap=gap(10), flex_align_items='center', width=px(620), width_mobile=px(100, '%'),
                padding=box(0, 0, 0, 0), margin=box(0, 0, 24, 0)),
          heading('Our Honey', size=30),
@@ -455,7 +455,7 @@ def build_home():
                            align='center', gap=px(2)),
                     text('<p>On our farm we grow clover meadow, honey flower and biodiversity plants, plus a '
                          'small kitchen garden and potatoes. Our bees gather nectar from these fields and the '
-                         'wild plants of the Finnish summer.</p>')],
+                         'wild plants of the Finnish summer.</p>', size=16)],
                    width=px(420), width_mobile=px(100, '%'), flex_gap=gap(16),
                    flex_align_items='center', flex_justify_content='center', padding=box(0, 0, 0, 0))],
             content_width='boxed', boxed_width=px(1200),
@@ -476,7 +476,7 @@ def build_home():
         inner([image(mid, fn, alt, size='large', _css_classes='nt-ratio-square', _element_width='inherit', height=px(301),
                      height_tablet=px(230), height_mobile=px(340), **{'object-fit': 'cover'}),
                heading(title, tag='h3', size=30, _margin=box(6, 0, 0, 0)),
-               text('<p>%s</p>' % desc, size=13, lh=1.7),
+               text('<p>%s</p>' % desc, size=15, lh=1.7),
                button('Learn more', url, _margin=box(6, 0, 0, 0))],
               flex_gap=gap(14), flex_align_items='center', padding=box(0, 0, 0, 0))
         for mid, fn, alt, title, desc, url in explore_items
