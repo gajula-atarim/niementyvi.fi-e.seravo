@@ -201,11 +201,36 @@ a {
 	mix-blend-mode: multiply;
 }
 
+/* Mobile: stack the hero – text first, photo bubbles below (no overlap). */
 @media (max-width: 767px) {
-	.e-con.nt-hero-circles {
-		width: 100% !important;
-		opacity: .35;
+	.e-con.nt-hero {
+		flex-direction: column !important;
+		justify-content: flex-start !important;
+		align-items: stretch !important;
+		padding-bottom: 24px !important;
 	}
+	.e-con.nt-hero > .nt-hero-text {
+		order: 1;
+	}
+	.e-con.nt-hero-circles {
+		order: 2;
+		position: relative !important;
+		inset: auto !important;
+		width: 100% !important;
+		height: 340px !important;
+		min-height: 0 !important;
+		margin-top: 28px !important;
+		opacity: 1 !important;
+	}
+	.elementor-widget.nt-circle img {
+		height: auto !important;
+		aspect-ratio: 1;
+	}
+	.elementor-widget.nt-circle--1 { top: 10px !important; right: 0 !important; bottom: auto !important; left: auto !important; width: 50% !important; }
+	.elementor-widget.nt-circle--2 { top: 90px !important; left: 4% !important; right: auto !important; bottom: auto !important; width: 42% !important; }
+	.elementor-widget.nt-circle--3 { top: 175px !important; right: 6% !important; left: auto !important; bottom: auto !important; width: 36% !important; }
+	.elementor-widget.nt-circle--4 { top: 0 !important; left: 30% !important; right: auto !important; bottom: auto !important; width: 20% !important; }
+	.elementor-widget.nt-circle--5 { top: 232px !important; left: 38% !important; right: auto !important; bottom: auto !important; width: 26% !important; }
 }
 
 /* ---------- Cards ---------- */

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'NIEMENTYVI_CHILD_VERSION', '1.0.0' );
+define( 'NIEMENTYVI_CHILD_VERSION', '1.0.1' );
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style(
