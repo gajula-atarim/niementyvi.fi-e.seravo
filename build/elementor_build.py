@@ -1,4 +1,4 @@
-"""Generate Elementor JSON for the Niementyvi header, footer and Home page.
+"""Generate Elementor JSON for the Niementyvi header, footer and Home (Etusivu) page.
 
 Every visible piece is a native Elementor / UAE widget so it stays editable
 in the Elementor editor. Output: build/out/{header,footer,home}.json
@@ -149,10 +149,10 @@ def icon_list(items, **extra):
 def build_header():
     topbar = icon_list(
         [{'text': t} for t in [
-            'Honey straight from the farm',
-            'We deliver ourselves or by post',
-            'Also at Jaanan Kirppis & K-Market Nuotta, Polvijärvi',
-            'Call 050 363 3693',
+            'Hunajaa suoraan tilalta',
+            'Toimitamme itse tai postitse',
+            'Myös Polvijärvellä Jaanan Kirppiksellä ja K-Market Nuotassa',
+            'Soita 050 363 3693',
         ]],
         view='inline',
         icon_align='center',
@@ -165,7 +165,7 @@ def build_header():
     )
 
     service = icon_list(
-        [{'text': 'Customer Service 050 363 3693', 'link': link('tel:0503633693')}],
+        [{'text': 'Asiakaspalvelu 050 363 3693', 'link': link('tel:0503633693')}],
         view='traditional', text_color=INK, text_color_hover=ACCENT, icon_align_mobile='center',
         icon_typography_font_size_mobile=px(11), icon_typography_line_height_mobile=px(1.4, 'em'),
         **typo('icon_typography', SANS, 12, 400, 1.4),
@@ -275,15 +275,15 @@ def build_footer():
                      _flex_size='grow', flex_gap=gap(10), padding=box(0, 0, 0, 0))
 
     columns = inner(
-        [column([col_title('Pages'), pages_menu]),
-         column([col_title('Where to buy'),
+        [column([col_title('Sivut'), pages_menu]),
+         column([col_title('Mistä ostaa'),
                  icon_list([{'text': t} for t in
-                            ['At the farm', 'Delivery or post', 'Jaanan Kirppis', 'K-Market Nuotta']],
+                            ['Tilalta', 'Kotiinkuljetus tai postitus', 'Jaanan Kirppis', 'K-Market Nuotta']],
                            **white_list)]),
-         column([col_title('Policies'),
-                 icon_list([{'text': 'Privacy policy', 'link': link(SITE + '/privacy-policy/')},
-                            {'text': 'Cookies', 'link': link('#')}], **white_list)]),
-         column([col_title('Contact'),
+         column([col_title('Tietosuoja'),
+                 icon_list([{'text': 'Tietosuojaseloste', 'link': link(SITE + '/privacy-policy/')},
+                            {'text': 'Evästeet', 'link': link('#')}], **white_list)]),
+         column([col_title('Yhteystiedot'),
                  text('<p>Sari Nevalainen<br><a href="https://www.google.com/maps/search/?api=1&amp;'
                       'query=Mikonniementie+8%2C+83700+Polvij%C3%A4rvi" target="_blank" rel="noopener">'
                       'Mikonniementie 8<br>83700 Polvijärvi</a></p>',
@@ -300,7 +300,7 @@ def build_footer():
 
     copyright_w = widget(
         'copyright',
-        shortcode='© [hfe_current_year] Niementyven tila | All Rights Reserved.',
+        shortcode='© [hfe_current_year] Niementyven tila | Kaikki oikeudet pidätetään.',
         align='left', title_color='#CCCCCC',
         **typo('caption_typography', SANS, 11, 400, 1.5),
     )
@@ -321,11 +321,11 @@ def build_footer():
 def build_home():
     # 1. Hero
     circles = [
-        (8, 'hero-honey-comb-bowl.jpg', 'Honey and honeycomb in a wooden bowl', dict(h='end', x=-6, v='start', y=-14, w=44)),
-        (9, 'hero-honeycomb.jpg', 'Honeycomb', dict(h='start', x=34, v='start', y=36, w=32)),
-        (10, 'hero-honey-white-bowl.jpg', 'Honey in a white bowl', dict(h='end', x=4, v='start', y=44, w=30)),
-        (11, 'hero-honey-jar.jpg', 'Honey jar', dict(h='start', x=34, v='start', y=6, w=15)),
-        (12, 'hero-honey-dipper.jpg', 'Honey dipper on a plate', dict(h='start', x=52, v='end', y=-16, w=24)),
+        (8, 'hero-honey-comb-bowl.jpg', 'Hunajaa ja hunajakennoa puukulhossa', dict(h='end', x=-6, v='start', y=-14, w=44)),
+        (9, 'hero-honeycomb.jpg', 'Kennohunaja', dict(h='start', x=34, v='start', y=36, w=32)),
+        (10, 'hero-honey-white-bowl.jpg', 'Hunajaa valkoisessa kulhossa', dict(h='end', x=4, v='start', y=44, w=30)),
+        (11, 'hero-honey-jar.jpg', 'Hunajapurkki', dict(h='start', x=34, v='start', y=6, w=15)),
+        (12, 'hero-honey-dipper.jpg', 'Hunajalusikka lautasella', dict(h='start', x=52, v='end', y=-16, w=24)),
     ]
     circle_widgets = []
     for n, (mid, fn, alt, p) in enumerate(circles, 1):
@@ -362,11 +362,11 @@ def build_home():
     )
 
     hero_text = inner(
-        [heading('Honey, naturally<br>good!', tag='h1', size=50, weight=600, align='left',
+        [heading('Hunajaa, luonnostaan hyvää!', tag='h1', size=50, weight=600, align='left',
                  **typo('typography', SCRIPT, 50, 600, 1.2, size_tablet=42, size_mobile=36)),
-         text('<p>Finnish honey from the pure nature and fields of North Karelia.</p>',
+         text('<p>Suomalaista hunajaa Pohjois-Karjalan puhtaasta luonnosta ja pelloilta.</p>',
               size=16, lh=1.7, color='#2F3D38', align='left'),
-         button('Order now', '#honey', pad=(11, 34, 11, 34), size=11, ls=0.66, align='left',
+         button('Tilaa nyt', '#honey', pad=(11, 34, 11, 34), size=11, ls=0.66, align='left',
                 border_border='solid', border_width=box(1.5, 1.5, 1.5, 1.5), border_color=INK,
                 button_hover_border_color=ACCENT, _css_classes='nt-btn-inset')],
         css_classes='nt-hero-text', width=px(320), width_tablet=px(320), width_mobile=px(100, '%'),
@@ -387,10 +387,10 @@ def build_home():
 
     # 2. Feature strip (each item: icon image + heading)
     feats = [
-        (21, 'icon-finnish-honey.png', 'Honeycomb icon', '100% Finnish honey'),
-        (22, 'icon-karelian-nature.png', 'Leaf icon', 'From pure North Karelian nature'),
-        (23, 'icon-clover-fields.png', 'Clover icon', 'Clover & honey-flower fields'),
-        (24, 'icon-naturally-good.png', 'Heart in hand icon', 'Naturally good'),
+        (21, 'icon-finnish-honey.png', 'Kennohunaja icon', '100 % suomalaista hunajaa'),
+        (22, 'icon-karelian-nature.png', 'Lehtikuvake', 'Puhtaasta pohjoiskarjalaisesta luonnosta'),
+        (23, 'icon-clover-fields.png', 'Apilakuvake', 'Apila- ja hunajakukkapellot'),
+        (24, 'icon-naturally-good.png', 'Sydän kämmenellä -kuvake', 'Luonnostaan hyvää'),
     ]
     feat_items = [
         inner([image(mid, fn, alt, size='full', width=px(52), _element_width='initial',
@@ -410,16 +410,16 @@ def build_home():
         overflow='hidden',
     )
 
-    # 3. Welcome + Our Honey
+    # 3. Welcome + Hunajamme
     products = [
-        (14, 'product-honey-450g.jpg', 'Honey 450 g jar', 'Honey (450 g)',
-         'Soft and easy to spoon. Pohjois-Karjalan Hunaja.', '7,00 €'),
-        (15, 'product-box-of-10-jars.jpg', 'Box of 10 honey jars', 'Box of 10 jars',
-         'Ten 450 g jars, cheaper per jar than buying singly.', 'Ask for price'),
-        (16, 'product-honeycomb.jpg', 'Honeycomb', 'Honeycomb',
-         'Placeholder product. Replace or remove once the range is confirmed.', '— €'),
-        (17, 'product-gift-jar.jpg', 'Gift jar of honey', 'Gift jar',
-         'Placeholder product. Replace or remove once the range is confirmed.', '— €'),
+        (14, 'product-honey-450g.jpg', '450 g:n hunajapurkki', 'Hunaja (450 g)',
+         'Pehmeää ja helposti lusikoitavaa. Pohjois-Karjalan Hunaja.', '7,00 €'),
+        (15, 'product-box-of-10-jars.jpg', 'Laatikollinen hunajapurkkeja', '10 purkin laatikko',
+         'Kymmenen 450 g:n purkkia – edullisempi kappalehinta kuin yksittäin ostettaessa.', 'Kysy hintaa'),
+        (16, 'product-honeycomb.jpg', 'Kennohunaja', 'Kennohunaja',
+         'Esimerkkituote. Vaihda tai poista, kun valikoima on varmistunut.', '— €'),
+        (17, 'product-gift-jar.jpg', 'Hunajaa lahjapurkissa', 'Lahjapurkki',
+         'Esimerkkituote. Vaihda tai poista, kun valikoima on varmistunut.', '— €'),
     ]
     product_cards = [
         inner([image(mid, fn, alt, size='large', _css_classes='nt-ratio-product', _element_width='inherit', height=px(266),
@@ -433,12 +433,11 @@ def build_home():
         for mid, fn, alt, name, desc, price in products
     ]
     honey = con(
-        [inner([heading('Welcome to Niementyvi farm!', size=34, size_mobile=30),
-                text('<p>We produce the best of nature\'s strength, honey, from the pure nature and fields '
-                     'of North Karelia. Naturally good!</p>', size=16)],
+        [inner([heading('Tervetuloa Niementyven tilalle!', size=34, size_mobile=30),
+                text('<p>Hunaja on luonnon voimaa parhaimmillaan. Tuotamme sitä Pohjois-Karjalan puhtaasta luonnosta ja pelloilta. Luonnostaan hyvää!</p>', size=16)],
                flex_gap=gap(10), flex_align_items='center', width=px(620), width_mobile=px(100, '%'),
                padding=box(0, 0, 0, 0), margin=box(0, 0, 24, 0)),
-         heading('Our Honey', size=30),
+         heading('Hunajamme', size=30),
          inner(product_cards, container_type='grid',
                grid_columns_grid={'unit': 'fr', 'size': 4, 'sizes': []},
                grid_columns_grid_tablet={'unit': 'fr', 'size': 2, 'sizes': []},
@@ -447,7 +446,7 @@ def build_home():
                grid_gaps={'unit': 'px', 'column': '16', 'row': '16', 'isLinked': True},
                grid_gaps_mobile={'unit': 'px', 'column': '16', 'row': '40', 'isLinked': False},
                grid_auto_flow='row', padding=box(0, 0, 0, 0)),
-         button('Order now', 'tel:0503633693', _margin=box(20, 0, 0, 0))],
+         button('Tilaa nyt', 'tel:0503633693', _margin=box(20, 0, 0, 0))],
         _element_id='honey', content_width='boxed', boxed_width=px(1000),
         flex_align_items='center', flex_gap=gap(30),
         padding=box(56, 32, 96, 32), padding_mobile=box(48, 16, 72, 16),
@@ -456,16 +455,14 @@ def build_home():
     # 4. Story
     story = con(
         [inner(
-            [inner([image(13, 'story-honey-jars.webp', 'Honey jars outdoors', size='full',
+            [inner([image(13, 'story-honey-jars.webp', 'Hunajapurkkeja ulkona', size='full',
                           _css_classes='nt-story-image', height=px(480), height_tablet=px(400),
                           height_mobile=px(360), **{'object-fit': 'contain'})],
                    width=px(50, '%'), width_mobile=px(100, '%'), padding=box(0, 0, 0, 0)),
-             inner([heading('Made by our bees', size=46, size_tablet=40, size_mobile=34),
+             inner([heading('Mehiläistemme tekemää', size=46, size_tablet=40, size_mobile=34),
                     widget('divider', style='solid', weight=px(1.5), color=INK, width=px(44),
                            align='center', gap=px(2)),
-                    text('<p>On our farm we grow clover meadow, honey flower and biodiversity plants, plus a '
-                         'small kitchen garden and potatoes. Our bees gather nectar from these fields and the '
-                         'wild plants of the Finnish summer.</p>', size=16)],
+                    text('<p>Tilallamme on apilaniittyä, hunajakukkaa ja luonnon monimuotoisuutta lisääviä kasveja. Lisäksi meillä on pieni kasvimaa ja perunamaa. Mehiläisemme keräävät mettä tilan niityiltä ja pelloilta sekä suomalaisen kesän luonnonkasveista.</p>', size=16)],
                    width=px(420), width_mobile=px(100, '%'), flex_gap=gap(16),
                    flex_align_items='center', flex_justify_content='center', padding=box(0, 0, 0, 0))],
             content_width='boxed', boxed_width=px(1200),
@@ -475,25 +472,25 @@ def build_home():
         css_classes='nt-story nt-bees-story', padding=box(0, 0, 0, 0), overflow='hidden',
     )
 
-    # 5. Explore
+    # 5. Tutustu
     explore_items = [
-        (18, 'explore-honey.jpg', 'Honey', 'Honey', 'Finnish honey for sale.', '#honey'),
-        (19, 'explore-beekeeping.jpg', 'Beekeeping', "Beekeeper's Diary",
-         "Read more about the apiary's year.", '#diary'),
-        (20, 'explore-contact.jpg', 'Contact', 'Contact', 'What, where?', '#contact'),
+        (18, 'explore-honey.jpg', 'Hunaja', 'Hunaja', 'Suomalaista hunajaa myytävänä.', '#honey'),
+        (19, 'explore-beekeeping.jpg', 'Mehiläistarhuri käsittelee hunajakennoa', "Mehiläistarhurin päiväkirja",
+         "Lue lisää mehiläistarhan vuodesta.", '#diary'),
+        (20, 'explore-contact.jpg', 'Yhteystiedot', 'Yhteystiedot', 'Mitä myymme ja mistä meidät löytää?', '#contact'),
     ]
     explore_cards = [
         inner([image(mid, fn, alt, size='large', _css_classes='nt-ratio-square', _element_width='inherit', height=px(301),
                      height_tablet=px(230), height_mobile=px(340), **{'object-fit': 'cover'}),
                heading(title, tag='h3', size=30, _margin=box(0, 0, 0, 0)),
                text('<p>%s</p>' % desc, size=15, lh=1.7, paragraph_spacing=px(0)),
-               button('Learn more', url, _margin=box(0, 0, 0, 0))],
+               button('Lue lisää', url, _margin=box(0, 0, 0, 0))],
               flex_gap=gap(14), flex_align_items='center', padding=box(0, 0, 0, 0),
               padding_mobile=box(0, 16, 0, 16))
         for mid, fn, alt, title, desc, url in explore_items
     ]
     explore = con(
-        [heading('Explore', size=30),
+        [heading('Tutustu', size=30),
          inner(explore_cards, container_type='grid',
                grid_columns_grid={'unit': 'fr', 'size': 3, 'sizes': []},
                grid_columns_grid_tablet={'unit': 'fr', 'size': 3, 'sizes': []},
