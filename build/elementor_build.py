@@ -166,35 +166,57 @@ def build_header():
 
     service = icon_list(
         [{'text': 'Customer Service 050 363 3693', 'link': link('tel:0503633693')}],
-        view='traditional', text_color=INK, text_color_hover=ACCENT,
+        view='traditional', text_color=INK, text_color_hover=ACCENT, icon_align_mobile='left',
+        icon_typography_font_size_mobile=px(10), icon_typography_line_height_mobile=px(1.3, 'em'),
         **typo('icon_typography', SANS, 12, 400, 1.4),
     )
 
-    logo = heading('Niementyven tila', tag='div', size=32, size_tablet=28, size_mobile=26,
+    logo = heading('Niementyven tila', tag='div', size=32, size_tablet=28, size_mobile=19,
                    color=BROWN, lh=1, url=SITE + '/', _css_classes='nt-logo')
 
     def icon(value, library, url, label):
         return widget('icon', selected_icon={'value': value, 'library': library},
                       link=link(url), primary_color=INK, hover_primary_color=ACCENT,
-                      size=px(18), _title=label)
+                      size=px(18), size_mobile=px(16), _title=label)
+
+    mobile_menu = widget(
+        'navigation-menu',
+        _title='Mobile menu', hide_desktop='hidden-desktop', hide_tablet='hidden-tablet',
+        menu='main-menu', layout='horizontal', navmenu_align='right', pointer='none',
+        dropdown='mobile', resp_align='right', full_width_dropdown='yes',
+        _element_width='initial', _element_custom_width=px(24),
+        toggle_color=INK, toggle_hover_color=ACCENT, toggle_size=px(20), toggle_border_width=px(0),
+        color_menu_item=INK, color_menu_item_hover=ACCENT, color_menu_item_active=ACCENT,
+        color_dropdown_item=INK, color_dropdown_item_hover=ACCENT, color_dropdown_item_active=ACCENT,
+        background_color_dropdown_item='#FFFFFF', background_color_dropdown_item_hover='#FFFFFF',
+        background_color_dropdown_item_active='#FFFFFF',
+        **typo('dropdown_typography', SANS, 12, 700, None, 'em', 'uppercase', 0.66),
+        **typo('menu_typography', SANS, 11, 700, None, 'em', 'uppercase'),
+    )
 
     right = inner(
         [icon('fas fa-phone-alt', 'fa-solid', 'tel:0503633693', 'Call'),
-         icon('fas fa-envelope', 'fa-solid', 'mailto:niementyvi@gmail.com', 'Email')],
+         icon('fas fa-envelope', 'fa-solid', 'mailto:niementyvi@gmail.com', 'Email'),
+         mobile_menu],
         flex_direction='row', flex_justify_content='flex-end', flex_align_items='center',
-        flex_gap=gap(16), width=px(32, '%'), width_mobile=px(100, '%'),
-        flex_justify_content_mobile='center', padding=box(0, 0, 0, 0),
+        flex_gap=gap(16), flex_gap_mobile=gap(10), width=px(32, '%'),
+        width_mobile={'unit': 'custom', 'size': 'max-content', 'sizes': []},
+        flex_justify_content_mobile='flex-end', flex_wrap_mobile='nowrap',
+        flex_align_items_mobile='center', padding=box(0, 0, 0, 0),
     )
 
     top_row = con(
-        [inner([service], width=px(32, '%'), width_mobile=px(100, '%'),
-               flex_align_items_mobile='center', padding=box(0, 0, 0, 0)),
-         inner([logo], width=px(30, '%'), width_mobile=px(100, '%'), padding=box(0, 0, 0, 0)),
+        [inner([service], width=px(32, '%'),
+               width_mobile={'unit': 'custom', 'size': 'calc(100% - 222px)', 'sizes': []},
+               flex_align_items_mobile='flex-start', padding=box(0, 0, 0, 0)),
+         inner([logo], width=px(30, '%'),
+               width_mobile={'unit': 'custom', 'size': 'max-content', 'sizes': []},
+               padding=box(0, 0, 0, 0)),
          right],
         content_width='boxed', boxed_width=px(1240),
-        flex_direction='row', flex_direction_mobile='column',
-        flex_align_items='center', flex_gap=gap(20), flex_wrap='nowrap',
-        padding=box(16, 40, 0, 40), padding_mobile=box(14, 16, 0, 16),
+        flex_direction='row', flex_direction_mobile='row', flex_align_items_mobile='center',
+        flex_align_items='center', flex_gap=gap(20), flex_gap_mobile=gap(8), flex_wrap='nowrap',
+        padding=box(16, 40, 0, 40), padding_mobile=box(12, 16, 12, 16),
     )
 
     nav = widget(
@@ -208,7 +230,7 @@ def build_header():
         color_dropdown_item=INK, color_dropdown_item_hover=ACCENT, toggle_color=INK,
         **typo('menu_typography', SANS, 11, 700, 1.2, 'em', 'uppercase', 0.66),
     )
-    nav_row = con([nav], padding=box(14, 24, 10, 24))
+    nav_row = con([nav], padding=box(14, 24, 10, 24), hide_mobile='hidden-mobile')
 
     header = con(
         [con([topbar], padding=box(7, 0, 7, 0), background_background='classic',
