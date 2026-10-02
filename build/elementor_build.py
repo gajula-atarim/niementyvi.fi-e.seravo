@@ -478,8 +478,8 @@ def build_home():
     explore_cards = [
         inner([image(mid, fn, alt, size='large', _css_classes='nt-ratio-square', _element_width='inherit', height=px(301),
                      height_tablet=px(230), height_mobile=px(340), **{'object-fit': 'cover'}),
-               heading(title, tag='h3', size=30, _margin=box(0, 0, 0, 0)),
-               text('<p>%s</p>' % desc, size=15, lh=1.7, paragraph_spacing=px(0)),
+               heading(title, tag='h3', family=SANS, size=13, weight=500, lh=1.4, _margin=box(0, 0, 0, 0)),
+               text('<p>%s</p>' % desc, size=13, lh=1.6, paragraph_spacing=px(0)),
                button('Learn more', url, _margin=box(0, 0, 0, 0))],
               flex_gap=gap(14), flex_align_items='center', padding=box(0, 0, 0, 0),
               padding_mobile=box(0, 16, 0, 16))
