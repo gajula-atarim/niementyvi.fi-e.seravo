@@ -1,0 +1,302 @@
+{
+ "_note": "Finnish copy for niementyvi.fi-e.seravo.com. Proper names kept: Niementyven tila, Pohjois-Karjalan Hunaja, Jaanan Kirppis, K-Market Nuotta, Polvijärvi, Sari Nevalainen, Mikonniementie.",
+ "header": {
+  "topbar_1": {
+   "en": "Honey straight from the farm",
+   "fi": "Hunajaa suoraan tilalta"
+  },
+  "topbar_2": {
+   "en": "We deliver ourselves or by post",
+   "fi": "Toimitamme itse tai postitse"
+  },
+  "topbar_3": {
+   "en": "Also at Jaanan Kirppis & K-Market Nuotta, Polvijärvi",
+   "fi": "Myös Polvijärvellä Jaanan Kirppiksellä ja K-Market Nuotassa"
+  },
+  "topbar_4": {
+   "en": "Call 050 363 3693",
+   "fi": "Soita 050 363 3693"
+  },
+  "service": {
+   "en": "Customer Service 050 363 3693",
+   "fi": "Asiakaspalvelu 050 363 3693"
+  }
+ },
+ "menu": {
+  "home": {
+   "en": "Home",
+   "fi": "Etusivu"
+  },
+  "honey": {
+   "en": "Honey",
+   "fi": "Hunaja"
+  },
+  "diary": {
+   "en": "Beekeeper's Diary",
+   "fi": "Mehiläistarhurin päiväkirja"
+  },
+  "contact": {
+   "en": "Contact",
+   "fi": "Yhteystiedot"
+  }
+ },
+ "hero": {
+  "title": {
+   "en": "Honey, naturally good!",
+   "fi": "Hunajaa, luonnostaan hyvää!"
+  },
+  "text": {
+   "en": "Finnish honey from the pure nature and fields of North Karelia.",
+   "fi": "Suomalaista hunajaa Pohjois-Karjalan puhtaasta luonnosta ja pelloilta."
+  },
+  "button": {
+   "en": "Order now",
+   "fi": "Tilaa nyt"
+  }
+ },
+ "features": {
+  "f1": {
+   "en": "100% Finnish honey",
+   "fi": "100 % suomalaista hunajaa"
+  },
+  "f2": {
+   "en": "From pure North Karelian nature",
+   "fi": "Puhtaasta pohjoiskarjalaisesta luonnosta"
+  },
+  "f3": {
+   "en": "Clover & honey-flower fields",
+   "fi": "Apila- ja hunajakukkapellot"
+  },
+  "f4": {
+   "en": "Naturally good",
+   "fi": "Luonnostaan hyvää"
+  }
+ },
+ "welcome": {
+  "title": {
+   "en": "Welcome to Niementyvi farm!",
+   "fi": "Tervetuloa Niementyven tilalle!"
+  },
+  "text": {
+   "en": "We produce the best of nature's strength, honey, from the pure nature and fields of North Karelia. Naturally good!",
+   "fi": "Hunaja on luonnon voimaa parhaimmillaan. Tuotamme sitä Pohjois-Karjalan puhtaasta luonnosta ja pelloilta. Luonnostaan hyvää!"
+  }
+ },
+ "products": {
+  "section_title": {
+   "en": "Our Honey",
+   "fi": "Hunajamme"
+  },
+  "p1_name": {
+   "en": "Honey (450 g)",
+   "fi": "Hunaja (450 g)"
+  },
+  "p1_text": {
+   "en": "Soft and easy to spoon. Pohjois-Karjalan Hunaja.",
+   "fi": "Pehmeää ja helposti lusikoitavaa. Pohjois-Karjalan Hunaja."
+  },
+  "p1_price": {
+   "en": "7,00 €",
+   "fi": "7,00 €"
+  },
+  "p2_name": {
+   "en": "Box of 10 jars",
+   "fi": "10 purkin laatikko"
+  },
+  "p2_text": {
+   "en": "Ten 450 g jars, cheaper per jar than buying singly.",
+   "fi": "Kymmenen 450 g:n purkkia – edullisempi kappalehinta kuin yksittäin ostettaessa."
+  },
+  "p2_price": {
+   "en": "Ask for price",
+   "fi": "Kysy hintaa"
+  },
+  "p3_name": {
+   "en": "Honeycomb",
+   "fi": "Kennohunaja"
+  },
+  "p3_text": {
+   "en": "Placeholder product. Replace or remove once the range is confirmed.",
+   "fi": "Esimerkkituote. Vaihda tai poista, kun valikoima on varmistunut."
+  },
+  "p4_name": {
+   "en": "Gift jar",
+   "fi": "Lahjapurkki"
+  },
+  "p4_text": {
+   "en": "Placeholder product. Replace or remove once the range is confirmed.",
+   "fi": "Esimerkkituote. Vaihda tai poista, kun valikoima on varmistunut."
+  },
+  "button": {
+   "en": "Order now",
+   "fi": "Tilaa nyt"
+  }
+ },
+ "story": {
+  "title": {
+   "en": "Made by our bees",
+   "fi": "Mehiläistemme tekemää"
+  },
+  "text": {
+   "en": "On our farm we grow clover meadow, honey flower and biodiversity plants, plus a small kitchen garden and potatoes. Our bees gather nectar from these fields and the wild plants of the Finnish summer.",
+   "fi": "Tilallamme kasvaa apilaniittyä, hunajakukkaa ja luonnon monimuotoisuutta lisääviä kasveja, ja lisäksi meillä on pieni kasvimaa ja perunamaa. Mehiläisemme keräävät mettä näistä kasveista ja suomalaisen kesän luonnonkasveista."
+  }
+ },
+ "explore": {
+  "section_title": {
+   "en": "Explore",
+   "fi": "Tutustu"
+  },
+  "e1_title": {
+   "en": "Honey",
+   "fi": "Hunaja"
+  },
+  "e1_text": {
+   "en": "Finnish honey for sale.",
+   "fi": "Suomalaista hunajaa myytävänä."
+  },
+  "e2_title": {
+   "en": "Beekeeper's Diary",
+   "fi": "Mehiläistarhurin päiväkirja"
+  },
+  "e2_text": {
+   "en": "Read more about the apiary's year.",
+   "fi": "Lue lisää mehiläistarhan vuodesta."
+  },
+  "e3_title": {
+   "en": "Contact",
+   "fi": "Yhteystiedot"
+  },
+  "e3_text": {
+   "en": "What, where?",
+   "fi": "Mitä myymme ja mistä meidät löytää?"
+  },
+  "button": {
+   "en": "Learn more",
+   "fi": "Lue lisää"
+  }
+ },
+ "footer": {
+  "pages": {
+   "en": "Pages",
+   "fi": "Sivut"
+  },
+  "where_to_buy": {
+   "en": "Where to buy",
+   "fi": "Mistä ostaa"
+  },
+  "w1": {
+   "en": "At the farm",
+   "fi": "Tilalta"
+  },
+  "w2": {
+   "en": "Delivery or post",
+   "fi": "Kotiinkuljetus tai postitus"
+  },
+  "w3": {
+   "en": "Jaanan Kirppis",
+   "fi": "Jaanan Kirppis"
+  },
+  "w4": {
+   "en": "K-Market Nuotta",
+   "fi": "K-Market Nuotta"
+  },
+  "policies": {
+   "en": "Policies",
+   "fi": "Tietosuoja"
+  },
+  "privacy": {
+   "en": "Privacy policy",
+   "fi": "Tietosuojaseloste"
+  },
+  "cookies": {
+   "en": "Cookies",
+   "fi": "Evästeet"
+  },
+  "contact": {
+   "en": "Contact",
+   "fi": "Yhteystiedot"
+  },
+  "copyright": {
+   "en": "© [year] Niementyven tila | All Rights Reserved.",
+   "fi": "© [year] Niementyven tila | Kaikki oikeudet pidätetään."
+  }
+ },
+ "image_alt": {
+  "8": {
+   "en": "Honey and honeycomb in a wooden bowl",
+   "fi": "Hunajaa ja hunajakennoa puukulhossa"
+  },
+  "9": {
+   "en": "Honeycomb",
+   "fi": "Hunajakenno"
+  },
+  "10": {
+   "en": "Honey in a white bowl",
+   "fi": "Hunajaa valkoisessa kulhossa"
+  },
+  "11": {
+   "en": "Honey jar",
+   "fi": "Hunajapurkki"
+  },
+  "12": {
+   "en": "Honey dipper on a plate",
+   "fi": "Hunajalusikka lautasella"
+  },
+  "13": {
+   "en": "Honey jars outdoors",
+   "fi": "Hunajapurkkeja ulkona"
+  },
+  "14": {
+   "en": "Honey 450 g jar",
+   "fi": "450 g:n hunajapurkki"
+  },
+  "15": {
+   "en": "Box of 10 honey jars",
+   "fi": "Laatikollinen hunajapurkkeja"
+  },
+  "16": {
+   "en": "Honeycomb",
+   "fi": "Kennohunajaa"
+  },
+  "17": {
+   "en": "Gift jar of honey",
+   "fi": "Lahjapurkki hunajaa"
+  },
+  "18": {
+   "en": "Honey",
+   "fi": "Hunajaa ja puulusikka"
+  },
+  "19": {
+   "en": "Beekeeping",
+   "fi": "Mehiläistarhuri käsittelee hunajakennoa"
+  },
+  "20": {
+   "en": "Contact",
+   "fi": "Hunajapurkki ja hunajalusikka"
+  },
+  "21": {
+   "en": "Honeycomb icon",
+   "fi": "Hunajakennokuvake"
+  },
+  "22": {
+   "en": "Leaf icon",
+   "fi": "Lehtikuvake"
+  },
+  "23": {
+   "en": "Clover icon",
+   "fi": "Apilakuvake"
+  },
+  "24": {
+   "en": "Heart in hand icon",
+   "fi": "Sydän kämmenellä -kuvake"
+  }
+ },
+ "page_titles": {
+  "31": {
+   "en": "Home",
+   "fi": "Etusivu"
+  }
+ },
+ "_review": "Blind back-translation review done twice by an independent reviewer; all lines rated OK or adjusted per its notes."
+}
