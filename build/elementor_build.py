@@ -419,7 +419,7 @@ def build_home():
                      height_tablet=px(410), height_mobile=px(410), **{'object-fit': 'cover'}),
                heading(name, tag='h3', size=30, _margin=box(0, 0, 0, 0)),
                text('<p>%s</p>' % desc, size=15, lh=1.7, color='#5A5A5A', _padding=box(0, 6, 0, 6),
-                    paragraph_spacing=px(0)),
+                    paragraph_spacing=px(0), _flex_size='grow'),
                heading(price, tag='div', family=SANS, size=12, weight=600, lh=1.4)],
               flex_gap=gap(14), flex_align_items='center', padding=box(0, 0, 0, 0),
               padding_mobile=box(0, 16, 0, 16))
