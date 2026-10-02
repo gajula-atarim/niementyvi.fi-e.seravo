@@ -266,3 +266,18 @@ a {
 .nt-footer-list a:hover {
 	color: var(--nt-accent);
 }
+
+/* Footer contact links (address, phone, email): Hello Elementor colours
+ * <a> pink by default, which made the underline red. Keep it white. */
+.nt-footer-contact .elementor-icon-list-item > a,
+.nt-footer-address a {
+	color: #fff;
+	text-decoration: underline;
+	text-decoration-color: currentColor;
+	text-underline-offset: 3px;
+}
+
+.nt-footer-contact .elementor-icon-list-item > a:hover,
+.nt-footer-address a:hover {
+	color: var(--nt-accent);
+}
